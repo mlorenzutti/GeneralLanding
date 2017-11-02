@@ -1,0 +1,59 @@
+<!-- headtitle.nunjucks -->
+<div class="modal fade bd-login-modal-lg" id="loginSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginSuccessModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="container color-black">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="row">
+        <div class="col-sm-12 text-md-center">
+            <h1 class="pt-3 pr-4 pr-sm-0 pt-md-5 pb-md-5 pb-3">Subscription Success</h1>
+        </div>  
+      </div>
+      <div class="row">
+        <div class="col-sm-5 pl-lg-5 pb-3 pb-sm-0">
+            <h3>Login Credentials</h3>
+            <div class="row mt-2">
+                <div class="col-5">Login id:</div>
+                <div class="col-7"><span class="label-username">---</span></div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-5">Password:</div>
+                <div class="col-7"><span class="label-password">---</span></div>
+            </div>
+    		
+        </div>
+        <div class="col-sm-7 pr-lg-5 pb-3">
+            <p>
+    			<a href="https://mitsweb.iitech.dk/downloads/sim/installations/cornerbancasa/en/CornerTrader_webdeploy.exe">Click here</a> to Download the trial version of CornèrTrader, the full platform for your personal computer
+    		</p>
+    		
+    		<p>
+    			<a href="https://secure.cornertrader.ch/sim/Login/en/">Click here</a> to login to the trial version of the web-based CornèrTrader, a light platform accessible from anywhere in the world
+    		</p>
+    
+    		<p>
+    			Alternatively use your smartphone to login to a trial version at <a href="https://mobile.cornertrader.ch/sim/Login/en/">mobile.cornertrader.ch/sim</a>
+    		</p>
+    
+    		
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center bg-light-grey pt-3 pb-3">
+            <p>
+    			<strong>If you have any questions,</strong> 
+    			please do not hestitate to contact us at
+    			<span class="phonenumber">+41 58 880 80 80</span>
+    		</p>
+    
+    		<p class="mb-0">
+    			The CornèrTrader Team
+    		</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

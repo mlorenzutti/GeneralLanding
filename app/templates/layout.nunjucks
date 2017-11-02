@@ -1,0 +1,135 @@
+<!-- layout.nunjucks -->
+<!doctype html>
+<!--[if IE 7 ]>      <html class="no-js ie ie7 lte7 lte8 lte9 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 8 ]>      <html class="no-js ie ie8 lte8 lte9 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>      <html class="no-js ie ie9 lte9>" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+
+    <head>
+    <meta name="robots" content="nofollow, noindex">
+	<meta name="language" content="en"/>		
+	<!--
+PLEASE DO NOT EDIT ABOVE this comment!
+
+
+====================================================================
+HEAD Code editable for agency below this line.
+====================================================================
+
+PLEASE DO NOT ADD:
+
+- HTML-tag "head"
+- meta-tag "language"
+- meta-tag "robots"
+- jQuery JavaScript Library (it is already available in this page)
+- Other JavaScript frameworks are not allowed
+- JavaScript livereload or similar
+- Remote JavaScript (such as https://cdn.remoteserver.com/javascript.js or //cdn.remoteserver.com/javascript.js)
+- Inline CSS
+
+Put your head code widhout the TAG-HTML <head> between this comment and "HEAD Code editable for agency - END" comment!
+-->
+
+
+
+
+<meta charset="utf-8">
+<title>Blank Form Landing page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<!--<link rel="stylesheet" href="resources/css/base.css"/>-->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.min.css">
+
+
+<!--
+
+====================================================================
+HEAD Code editable for agency - END
+====================================================================
+
+
+PLEASE DO NOT EDIT BELOW this comment!
+
+
+
+
+
+-->
+<script src="//assets.adobedtm.com/74a99ada950e97791c96890357510ed60af528e5/satelliteLib-9344c6e91ae647ed6089395731e180acf750daf5.js"></script>
+    </head>
+    <body>
+	
+	    	<!-- Google Analytics -->
+    	<script type="text/javascript">
+		       var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-37245141-1']);
+				  _gaq.push(['_setAllowLinker', true]);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+      	</script>
+
+        <!--
+
+
+PLEASE DO NOT EDIT ABOVE this comment!
+
+
+====================================================================
+BODY Code editable for agency below this line.
+====================================================================
+
+PLEASE DO NOT ADD:
+
+- HTML-tag "body"
+- jQuery JavaScript Library (it is already available in this page)
+- Other JavaScript frameworks are not allowed
+- JavaScript livereload or similar
+- Remote JavaScript (such as https://cdn.remoteserver.com/javascript.js or //cdn.remoteserver.com/javascript.js)
+- Inline CSS
+
+Put your body code widhout the TAG-HTML <body> between this comment and "BODY Code editable for agency - END" comment!
+-->
+
+
+
+  
+  {% block content %} {% endblock %}
+  
+  <script src="js/vendors.min.js"></script>
+  <script src="js/theme.js"></script>
+<!--
+
+====================================================================
+BODY Code editable for agency - END
+====================================================================
+
+
+PLEASE DO NOT EDIT BELOW this comment! -->
+
+    
+	
+    <!--<script src="resources/js/base.js"></script>-->
+        <!--googleoff: all-->
+		
+	<script type="text/javascript">
+		var adobeDtmJsonInfo = {
+		   "channel": "landingpage mobile",
+		   "currentUri": "\x2Fde\x2Ftntlandingpages\x2Fblank-form-landing-page\x2Findex\x2Ehtml",
+		   "fromThisUri": "false",
+		   "language": "en",
+		   "pageName": "landingpage mobile-blank form landing page",
+		   "subsection": "",
+		   "subsection2": ""
+		};
+		if(typeof _satellite != 'undefined'){ _satellite.pageBottom(); }
+	</script>
+			
+        <!--googleon: all-->
+    </body>
+</html>

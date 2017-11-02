@@ -1,0 +1,42 @@
+.modal {
+    h1 {
+        font-family: $font-family-sans-serif-alt;
+    }
+    a {
+        font-weight: bold;
+        color: $main-color;
+        &:hover {
+          color: darken($main-color,20);
+        }
+      }
+    .close {
+        border: 0;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 30px;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        padding: 0;
+        margin: 0;
+        z-index: 10;
+        outline: none !important;
+        cursor: pointer;
+        background:none !important;
+        -webkit-appearance: none;
+        @include media-breakpoint-down(sm){
+            top: 13px;
+        }
+        span {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            line-height: 35px;
+            transition: 0.3s ease color;
+            &:hover, &:focus {
+                color: lighten(black,20);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'DINPro';
+	src: url('../static/fonts/DINPro-Bold.eot');
+	src: url('../static/fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../static/fonts/DINPro-Bold.woff2') format('woff2'),
+		url('../static/fonts/DINPro-Bold.woff') format('woff'),
+		url('../static/fonts/DINPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('../static/fonts/DINPro-Regular.eot');
+	src: url('../static/fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../static/fonts/DINPro-Regular.woff2') format('woff2'),
+		url('../static/fonts/DINPro-Regular.woff') format('woff'),
+		url('../static/fonts/DINPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,109 @@
+.form {
+    font-family: $font-family-sans-serif-alt;
+    h1, h2, h3 {
+        font-family: $font-family-sans-serif-alt
+    }
+}
+
+label {
+    font-size: 14px;
+    display: block;
+}
+
+.form__elem {
+    margin-bottom: 15px;
+    label {
+        display: block;
+        margin-bottom: 2px;        
+        margin-left: 5px;
+    }
+}
+
+.form__disclaimer {
+    padding-left: 35px;
+    font-size: 14px;
+    line-height: 1.2;
+    ul {
+        padding-left: 18px;
+    }
+}
+
+.form__submit {
+    position: relative;
+    bottom: -25px;
+}
+
+.form-control {
+    background: $grey;
+    -webkit-appearance: none;
+    font-size: 18px;
+    border: 1px solid $dark-grey;
+    display: block;
+    width:100%;
+    border-radius: 8px;
+    height: 45px;
+    line-height: 45px;
+    outline: none !important;
+    padding: 0 20px;
+    font-family: $font-family-sans-serif-alt;
+    &.parsley-error {
+        border: 1px solid $red;
+    }
+}
+
+.form__elem--combinated {
+    background: $grey;
+    -webkit-appearance: none;
+    font-size: 18px;
+    border: 1px solid $dark-grey;
+    display: block;
+    width:100%;
+    border-radius: 8px;
+    height: 45px;
+    line-height: 45px;
+    outline: none !important;
+    padding: 0 0px;
+    .typeahead__container {
+        width: 55px;
+        display: inline-block;
+        .typeahead__cancel-button {
+            display: none;
+        }
+        .js-typeahead-prefix {
+            padding-right: 0 !important;
+        }
+        .typeahead__list {
+            min-width:200px;
+        }
+    }
+    input {
+        background:none;
+        border: none;
+        font-family: $font-family-sans-serif-alt;
+        outline:none;
+        height: 43px;
+        position: relative;
+        top: -1px;
+        line-height: 43px;
+    }
+    select {
+        -webkit-appearance: none;
+        background:none;
+        border: none;
+        outline:none;
+        height: 43px;
+        line-height: 43px;
+    }
+}
+
+.parsley-errors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: $red;
+    margin-top: 0px;
+    margin-left: 5px;
+    line-height: 20px;
+    display: block;
+}

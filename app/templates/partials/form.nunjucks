@@ -1,0 +1,89 @@
+<!-- form.nunjucks -->
+<div class="form bg-white color-black pt-3 pl-md-4 pr-md-4 pl-2 pr-2">
+    <div class="form__head text-center">
+        <h1>Sign-up for a<br/><span class="color-main">free demo</span></h1>
+        <h5 class="pt-2">Trade with simluated CHF 100.000.-</h5>
+    </div>
+    <div class="form__body pt-md-4 pt-2">
+        <form method="GET" id="subscriptionform" >
+            <div class="form__elem">
+                <label for="country">Country</label>
+                <div class="typeahead__container cancel">
+                    <div class="typeahead__field">
+                        <span class="typeahead__query">
+                            <input class="js-typeahead-country_v1" required="" name="country_v1[query]" type="search" value="Switzerland" placeholder="" autocomplete="off">
+                        </span>
+                    </div>
+                </div>
+                <input type="hidden" required="" class="js-country" name="country" value="CH" />
+            </div>
+            <div class="form__elem">
+                <label for="canton">Canton</label>
+                <div class="typeahead__container">
+                    <div class="typeahead__field">
+                        <span class="typeahead__query">
+                            <input class="js-typeahead-district" required="" name="district[query]" type="search" placeholder="" autocomplete="off">
+                        </span>
+                    </div>
+                </div>
+                <input type="hidden" required="" class="js-district" name="district" value="" />
+            </div>
+            <div class="form__elem">
+                <label for="name">First Name</label>
+                <input type="text" required="" id="name" name="name" class="form-control"/>
+            </div>
+            <div class="form__elem">
+                <label for="surname">Surname</label>
+                <input type="text" required="" id="surname" name="surname" class="form-control"/>
+            </div>
+            <div class="form__elem">
+                <label for="email">E-mail</label>
+                <input type="text" required="" id="email" name="email" class="form-control"/>
+            </div>
+            <div class="form__elem">
+                <label for="phonenumber">Phone Number</label>
+                <div class="form__elem--combinated">
+                    <div class="typeahead__container cancel">
+                        <div class="typeahead__field">
+                            <span class="typeahead__query">
+                                <input class="js-typeahead-prefix" name="prefix[query]" type="search" value="+41" placeholder="" autocomplete="off">
+                            </span>
+                        </div>
+                    </div>
+                    <input type="hidden" required="" class="js-prefix" name="countryAreaCode" value="+41" />
+                    
+                    <input type="text" required="" name="phonenumber"/>
+                </div>
+                
+            </div>
+            <div class="input check-input">
+                <input type="hidden" name="check" />
+            </div>
+            <div class="cntInputCbstk">
+                <input type="hidden" name="__cbstk" value="ctstk01" />
+                <input type="hidden" name="__cbsck" value="" />
+            </div>
+            <div class="form__elem mt-4">
+                <div class="md-checkbox">
+                    <input required="" id="disclaimerAccepted" name="disclaimerAccepted" type="checkbox">
+                    <label for="disclaimerAccepted">
+                        <a data-toggle="collapse" href="#disclaimer" aria-expanded="false" aria-controls="disclaimer">
+                        Disclaimer
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <div class="form__disclaimer collapse" id="disclaimer">
+                <p>By submitting my request for the Demo Account I recognize that I’m informed and that I accept the following:</p>
+                <ul>
+                <li>Cornèr Banl Ltd. is a fully Swiss licensed bank that is not authorized by regulators in other countries;</li>
+                <li>The demo account form is not an active solicitation of banking and/or financial services and/or financial products toward residents of foreign countries;</li>
+                <li>Therefore, I access to this Demo account on my own and sole initiative. I accept to be contacted by Cornèr Bank Ltd. by phone or e-mail in order to provide me further information regarding the trading platforms, their functionalities, products and services connected with the operativity of the platforms.</li>
+                </ul>
+            </div>
+            <div class="form__submit text-center">
+                <button type="submit" class="btn-primary">Get started</button>
+            </div>
+        </form>
+    </div>
+</div>

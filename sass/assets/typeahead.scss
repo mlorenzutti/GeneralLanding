@@ -1,0 +1,19 @@
+$typeahead-font-size: 18px;
+$typeahead-primary-color:$dark-grey;
+$typeahead-radius: 8px;
+$typeahead-border-color: $dark-grey;
+$typeahead-padding-y: 10.5px;
+$typeahead-padding-x: 15px;
+$typeahead-item-background:$grey;
+$typeahead-dropdown-spacing:0px;
+
+@import "../../src/scss/typeahead/jquery.typeahead";
+
+.typeahead__field input {
+    border-radius: $typeahead-radius !important;
+    background:$typeahead-item-background !important;
+    -webkit-appearance: none !important;
+    &.parsley-error {
+        border: 1px solid $red !important;
+    }
+}

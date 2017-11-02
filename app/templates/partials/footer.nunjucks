@@ -1,0 +1,11 @@
+<!-- footer.nunjucks -->
+<div class="container">
+    <div class="row align-items-center">
+         <div class="col-sm-10 offset-sm-1 text-center pt-4 pb-4">
+         <p>
+            Do You Have Questions? Contact CornèrTrader at <strong>+41 58 880 80 80</strong> or write an e-mail to <strong>info@cornertrader.ch</strong> 
+Cornèr Bank Ltd., Tödistrasse 27, CH-8002 Zurich, Switzerland
+        </p>
+         </div> 
+    </div>
+</div>

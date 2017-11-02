@@ -1,0 +1,23 @@
+<!-- headbody.nunjucks -->
+<div id="accordion" role="tablist" aria-multiselectable="true" class="mt-5">
+{% for listitem in list %}
+  <div class="listitem">
+    <div class="listitem__header" role="tab" id="head_{{listitem.id}}">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" class="align-items-center" data-parent="#accordion" href="#{{listitem.id}}" aria-expanded="true" aria-controls="{{listitem.id}}">
+          <div class="listitem__icon">
+            <img src="./static/img/{{listitem.icon}}">
+          </div> {{listitem.title}}
+          <div class="listitem__arrow">
+          </div> 
+        </a>
+      </h5>
+    </div>
+    <div id="{{listitem.id}}" class="collapse {{ "show" if listitem.active=="true" else "" }}" role="tabpanel" aria-labelledby="{{listitem.id}}">
+      <div class="listitem__block">
+        {{listitem.desc}}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>

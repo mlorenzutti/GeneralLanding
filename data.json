@@ -1,0 +1,33 @@
+{
+    "list": [{
+      "active": "true",
+      "id": "list_1",
+      "title": "Transparent conditions",
+      "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+      "icon": "icon_1.svg"
+    }, {
+      "active": "false",
+      "id": "list_2",
+      "title": "Bonds, Forex, Forex options, CFDs, Stocks, Stock options, Futures, Contract options",
+      "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+      "icon": "icon_2.svg"
+    }, {
+        "id": "list_3",
+        "active": "false",
+        "title": "Tailor-made pricing",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+        "icon": "icon_3.svg"
+      }, {
+        "id": "list_4",
+        "active": "false",
+        "title": "Dedicated Relationship Manager",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+        "icon": "icon_4.svg"
+      }, {
+        "id": "list_5",
+        "active": "false",
+        "title": "Cryptocurrencies",
+        "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ",
+        "icon": "icon_5.svg"
+      }]
+  }

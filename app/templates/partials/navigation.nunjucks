@@ -1,0 +1,22 @@
+<!-- navigation.nunjucks -->
+<div class="container">
+<nav class="mt-3">
+  <div class="row">
+    <div class="col-4">
+      <div class="nav__logo">
+        <img src="static/img/CBA_CornerTrader_Logo.png">
+      </div>
+    </div>
+    <div class="col-8 text-right">
+      <div class="nav__languages">
+        <ul>
+            <li><a href="#">DE</a></li>
+            <li><a href="#">FR</a></li>
+            <li><a href="#">IT</a></li>
+            <li><a class="active" href="#">EN</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>

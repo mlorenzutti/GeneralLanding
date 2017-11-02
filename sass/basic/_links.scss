@@ -1,0 +1,9 @@
+a {
+    color: $body-color;
+    transition: 0.3s ease color;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: darken($body-color,20);
+        text-decoration: none;
+    }
+}

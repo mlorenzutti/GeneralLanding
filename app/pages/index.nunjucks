@@ -1,0 +1,31 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+{% include "partials/navigation.nunjucks" %}
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-5 col-lg-6">
+            <div>
+            {% include "partials/headtitle.nunjucks" %}
+            </div>
+            <div class="d-none d-md-block">
+            {% include "partials/headbody.nunjucks" %}  
+            </div>
+        </div>
+        <div class="col-md-7 col-lg-6">
+            {% include "partials/form.nunjucks" %}
+            <div class="d-block d-md-none">
+            {% include "partials/headbody.nunjucks" %}  
+            </div>
+        </div>
+    </div>
+</div>
+{% include "partials/block1.nunjucks" %}
+{% include "partials/block2.nunjucks" %}
+{% include "partials/footer.nunjucks" %}
+{% include "partials/modal.nunjucks" %}  
+
+
+
+{% endblock %}

@@ -1,39 +1,50 @@
+$main-color: #5BC244;
+$main-border-color: #539939;
+$headlines-color:$main-color;
+$opposite-color: #FFFFFF;
+$body-color: #ffffff;
+$disabled-color: #9B9B9B;
+$body-bg: #000000;
+$secondary-color: lighten($main-color,20%);
+$light-grey: #E7E7E7;
+$grey: #F5F5F5;
+$dark-grey: #5D5D5D;
+$red: #FF0000;
 
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+$colors: (
+  main: $main-color,
+  main-light: lighten($main-color,20%),
+  main-lighter: lighten($main-color,30%),
+  black: #282828,
+  white: #FFFFFF,
+  beige: #EAE5D7,
+  light-grey: $light-grey,
+  dark-grey: $dark-grey,
+  red: $red
+);
 
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-  ) !default;
+
+$font-family-sans-serif: 'DINPro', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif-alt: 'Fira Sans', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+$headlines-font-family: 'DINPro', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$headlines: (
+  h1: 46px,
+  h2: 44px,
+  h3: 22px,
+  h4: 18px,
+  h5: 18px,
+  h6: 16px
+) !default;
   
-  @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-  @include _assert-starts-at-zero($grid-breakpoints);
-  
-  
-  // Grid containers
-  //
-  // Define the maximum width of `.container` for different screen sizes.
-  
-  $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px
-  ) !default;
-  
-  @include _assert-ascending($container-max-widths, "$container-max-widths");
-  
-  
-  // Grid columns
-  //
-  // Set the number of columns and specify the width of the gutters.
-  
-  $grid-columns:                12 !default;
-  $grid-gutter-width:           30px !default;
+
+$border-radius:               0px;
+$border-radius-lg:            0px;
+$border-radius-sm:            0px;
   

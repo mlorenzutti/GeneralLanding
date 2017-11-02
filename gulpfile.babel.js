@@ -9,15 +9,16 @@ var basePaths = {
 // browser-sync watched files
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
-    './css/*.min.css',
-    './js/*.min.js',
+    './dist/css/*.min.css',
+    './dist/js/*.min.js',
+    './app/**/*.nunjucks',
     './**/*.php'
 ];
 
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    server: true,
+    server: 'dist',
     notify: false
 };
 
@@ -40,6 +41,8 @@ var merge = require('gulp-merge');
 var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data')
 
 
 // Run:
@@ -53,12 +56,12 @@ gulp.task('scss-for-prod', function() {
 
     var pipe1 = source.pipe(clone())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./dist/css'));
 
     var pipe2 = source.pipe(clone())
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./dist/css'));
 
     return merge(pipe1, pipe2);
 });
@@ -73,13 +76,18 @@ gulp.task('scss-for-dev', function() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/css'))
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
     gulp.watch('./sass/**/*.scss', ['scss-for-dev']);
 });
 
+
+gulp.task('move-static', function(){
+    gulp.src("static/**/**.*")
+    .pipe(gulp.dest('dist/static'));
+})
 
 
 // Run:
@@ -91,7 +99,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 
 
@@ -100,7 +108,9 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/theme.css', ['cssnano']);
+    gulp.watch('./app/**/*.nunjucks', ['nunjucks']);
+    gulp.watch('./dist/css/theme.css', ['cssnano']);
+    gulp.watch([basePaths.customjs + '*.js'], ['scripts']);
     gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
 });
 
@@ -109,13 +119,13 @@ gulp.task('watch', function () {
 // gulp cssnano
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
-  return gulp.src('./css/theme.css')
+  return gulp.src('./dist/css/theme.css')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./dist/css/'))
 });
 
 gulp.task('cleancss', function() {
@@ -136,7 +146,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch','move-static'], function () { });
 
 
 // Run:
@@ -145,26 +155,31 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano', 'scripts'], function 
 gulp.task('scripts', function() {
     var scriptsVendors = [
         basePaths.dev + 'js/jquery/jquery.js', //add here bootstrap js if is necessary
+        basePaths.dev + 'js/bootstrap/util.js',
+        basePaths.dev + 'js/bootstrap/collapse.js',
+        basePaths.dev + 'js/bootstrap/modal.js',
+        basePaths.dev + 'js/parsleyjs/parsley.js',
+        basePaths.dev + 'js/typeahead/jquery.typeahead.min.js'
         //basePaths.dev + 'js/bootstrap/alert.js'
     ];
     var scriptsProject = [
-        basePaths.customjs + 'js/project_general.js' 
+        basePaths.customjs + 'project_general.js' 
     ];
   gulp.src(scriptsVendors)
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('./dist/js/'));
 
     gulp.src(scriptsProject)
       .pipe(concat('theme.js'))
       .pipe(babel())
-      .pipe(gulp.dest('./js/'));
+      .pipe(gulp.dest('./dist/js/'));
 
       gulp.src(scriptsProject)
         .pipe(concat('theme.min.js'))
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('./js/'));
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 // Copy all Bootstrap JS files
@@ -178,10 +193,33 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'bootstrap/js/dist/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap'));
 
+    gulp.src(basePaths.node + 'jquery-typeahead/dist/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js/typeahead'));
+
+    gulp.src(basePaths.node + 'parsleyjs/dist/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js/parsleyjs'));
+
+    gulp.src(basePaths.node + 'jquery-typeahead/src/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/scss/typeahead'));
+
     gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/scss/bootstrap'));
 
 });
+
+gulp.task('nunjucks', function() {
+    // nunjucks stuff here
+    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    // Renders template with nunjucks
+    .pipe(data(function() {
+        return require('./data.json')
+      }))
+    .pipe(nunjucksRender({
+        path: ['app/templates']
+      }))
+    // output files in app folder
+    .pipe(gulp.dest('dist'))
+  });
 
 
 // Run

@@ -1,0 +1,19 @@
+.btn-primary {
+    font-family:$font-family-sans-serif-alt;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+    background: $main-color;
+    border:2px solid $main-border-color;
+    border-radius: 11px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    transition: 0.3s ease background;
+    -webkit-appearance: none;
+    text-align: center;
+    cursor: pointer;
+    &:hover, &:active {
+        background: $main-border-color;
+    }
+}

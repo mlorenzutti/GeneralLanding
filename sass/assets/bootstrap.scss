@@ -7,3 +7,16 @@
 
 // Core variables and mixins
 @import "../../src/scss/bootstrap/bootstrap-grid";
+@import "../../src/scss/bootstrap/mixins/transition";
+@import "../../src/scss/bootstrap/mixins/text-truncate";
+@import "../../src/scss/bootstrap/mixins/text-emphasis";
+@import "../../src/scss/bootstrap/mixins/border-radius";
+@import "../../src/scss/bootstrap/mixins/box-shadow";
+@import "../../src/scss/bootstrap/mixins/text-hide";
+@import "../../src/scss/bootstrap/mixins/hover";     
+@import "../../src/scss/bootstrap/transitions";
+@import "../../src/scss/bootstrap/modal";
+@import "../../src/scss/bootstrap/utilities/text"; 
+@import "../../src/scss/bootstrap/utilities/display"; 
+@import "../../src/scss/bootstrap/utilities/spacing";  
+

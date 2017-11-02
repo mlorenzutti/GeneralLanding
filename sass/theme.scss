@@ -1,7 +1,30 @@
-@import "assets/bootstrap";
-
 @import "variables";
+@import "assets/bootstrap";
+@import "assets/typeahead";
+
+@import "utilities/reset";
+@import "basic/colors";
+@import "basic/headlines"; 
+@import "basic/links";  
+@import "basic/fonts";  
+@import "basic/forms";  
+@import "basic/buttons"; 
+@import "basic/images"; 
+@import "components/nav";
+@import "components/listitem";   
+@import "components/modal";
+@import "components/md-checkbox";
 
 body {
-    background: black;
+    background: $body-bg;     
+    color: $body-color;
+    font-family: $font-family-sans-serif;
+    background-image:url('../static/img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    line-height: 1.3;
+    @include media-breakpoint-down(xs){
+        background-position: 27% top;
+        background-size: 209%;
+    }
 }
