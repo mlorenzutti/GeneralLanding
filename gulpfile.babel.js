@@ -170,7 +170,7 @@ gulp.task('scripts', function() {
         basePaths.customjs + 'project_general.js' 
     ];
 
-  gulp.src(scriptsVendors)
+  gulp.src(scriptsJquery)
     .pipe(concat('jquery.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'));
