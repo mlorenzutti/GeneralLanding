@@ -100,9 +100,11 @@ Put your body code widhout the TAG-HTML <body> between this comment and "BODY Co
 
   
   {% block content %} {% endblock %}
-  
+  <!-- jQuery inclusion for testing -->
+  <script src="js/jquery.min.js"></script>
+  <!-- jQuery -->
   <script src="js/vendors.min.js"></script>
-  <script src="js/theme.js"></script>
+  <script src="js/theme.min.js"></script>
 <!--
 
 ====================================================================

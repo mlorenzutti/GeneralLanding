@@ -148,13 +148,17 @@ gulp.task('browser-sync', function() {
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task('watch-bs', ['browser-sync', 'watch','move-static'], function () { });
 
+gulp.task('build',['move-static','sass','nunjucks','scripts','cssnano'], function () { });
+
 
 // Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
-    var scriptsVendors = [
+    var scriptsJquery = [
         basePaths.dev + 'js/jquery/jquery.js', //add here bootstrap js if is necessary
+    ]
+    var scriptsVendors = [
         basePaths.dev + 'js/bootstrap/util.js',
         basePaths.dev + 'js/bootstrap/collapse.js',
         basePaths.dev + 'js/bootstrap/modal.js',
@@ -165,6 +169,12 @@ gulp.task('scripts', function() {
     var scriptsProject = [
         basePaths.customjs + 'project_general.js' 
     ];
+
+  gulp.src(scriptsVendors)
+    .pipe(concat('jquery.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'));
+
   gulp.src(scriptsVendors)
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
