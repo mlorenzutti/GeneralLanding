@@ -163,7 +163,8 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/bootstrap/collapse.js',
         basePaths.dev + 'js/bootstrap/modal.js',
         basePaths.dev + 'js/parsleyjs/parsley.js',
-        basePaths.dev + 'js/typeahead/jquery.typeahead.min.js'
+        basePaths.dev + 'js/typeahead/jquery.typeahead.min.js',
+        basePaths.dev + 'js/jqueryscrollto/jquery.scrollTo.js'
         //basePaths.dev + 'js/bootstrap/alert.js'
     ];
     var scriptsProject = [
@@ -208,6 +209,9 @@ gulp.task('copy-assets', function() {
 
     gulp.src(basePaths.node + 'parsleyjs/dist/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/parsleyjs'));
+
+    gulp.src(basePaths.node + 'jquery.scrollto/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js/jqueryscrollto'));
 
     gulp.src(basePaths.node + 'jquery-typeahead/src/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/scss/typeahead'));

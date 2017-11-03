@@ -1,4 +1,10 @@
 $(function () {
+
+  $('.js-gotoform').on("click", function (e) {
+    e.preventDefault();
+    $(window).scrollTo(document.getElementById('subscriptionformcontainer'), 800, { offset: -50 });
+  });
+
   // here the line for opening the modal
   $('#loginSuccessModal').modal('show');
 

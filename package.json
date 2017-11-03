@@ -33,6 +33,7 @@
     "gulp-watch": "^4.3.11",
     "jquery": "^3.2.1",
     "jquery-typeahead": "^2.10.4",
+    "jquery.scrollto": "^2.1.2",
     "lodash": "^4.17.4",
     "merge2": "^1.0.2",
     "node-sass": "^4.5.3",

@@ -10,12 +10,14 @@
             {% include "partials/headtitle.nunjucks" %}
             </div>
             <div class="d-none d-md-block">
+            {% set rand = "first" %}
             {% include "partials/headbody.nunjucks" %}  
             </div>
         </div>
         <div class="col-md-7 col-lg-6">
             {% include "partials/form.nunjucks" %}
             <div class="d-block d-md-none">
+            {% set rand = "second" %}
             {% include "partials/headbody.nunjucks" %}  
             </div>
         </div>

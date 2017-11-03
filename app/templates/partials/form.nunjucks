@@ -1,5 +1,5 @@
 <!-- form.nunjucks -->
-<div class="form bg-white color-black pt-3 pl-md-4 pr-md-4 pl-2 pr-2">
+<div class="form bg-white color-black pt-3 pl-md-4 pr-md-4 pl-2 pr-2" id="subscriptionformcontainer">
     <div class="form__head text-center">
         <h1>Sign-up for a<br/><span class="color-main">free demo</span></h1>
         <h5 class="pt-2">Trade with simluated CHF 100.000.-</h5>
