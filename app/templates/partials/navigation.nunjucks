@@ -7,7 +7,7 @@
         <img src="static/img/CBA_CornerTrader_Logo.png">
       </div>
     </div>
-    <div class="col-8 text-right">
+    <div class="col-8 text-right">   
       <div class="nav__languages">
         <ul>
             <li><a href="#">DE</a></li>

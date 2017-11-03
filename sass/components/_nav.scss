@@ -1,7 +1,10 @@
 nav {
     .nav__logo {
         img {
-            width: 136px;
+            width: 144px;  
+            @include media-breakpoint-down(sm){
+                width: 120px;
+            }
         }
     }
     .nav__languages {
