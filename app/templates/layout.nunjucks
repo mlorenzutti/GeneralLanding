@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>HTML5 Template</title>
+  <meta name="description" content="HTML5 Template">
+  <meta name="author" content="MLWD">
+  <link rel="stylesheet" href="css/theme.min.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  {% block content %} {% endblock %}
+  <script src="js/vendors.min.js?v=1.0"></script>
+  <script src="js/theme.min.js?v=1.0"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+<h1>This is the main page</h1>
+{% endblock %}
